@@ -9,7 +9,7 @@
     "compile": "npx tsc",
     "copy-assets": "robocopy . dist /E /XD dist .git node_modules /XF tsconfig.json package-lock.json package.json README.md .gitignore *.ts *.tsx LICENSE",
     "build": "npm run clean && npm run compile && npm run copy-assets",
-    "deploy-cmds": "node dist/deploy-commands.js", 
+    "deploy-cmds": "node dist/deploy-commands.js",
     "start": "node dist/index.js",
     "dev": "npm run build & npm run deploy-cmds & npm run start",
     "fast-dev": "npm run compile && node npm run start"
@@ -26,9 +26,11 @@
   "homepage": "https://github.com/LockedInStudy/discord-bot#readme",
   "dependencies": {
     "discord.js": "^14.18.0",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.13.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
